@@ -1,16 +1,31 @@
 package fsd.week1.fsdweek1;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller
 {
     @FXML
-    private Label welcomeText;
+    private Label promptLabel;
 
     @FXML
-    protected void onHelloButtonClick()
+    private TextField enterName;
+    @FXML
+    protected void handleSubmitButtonPressed()
     {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        System.out.println(enterName.getText());
+        enterName.setText("");
+    }
+
+    public void handleCancelButtonPressed()
+    {
+        enterName.setText("");
+    }
+
+    public void handleQuitButtonPressed()
+    {
+        Platform.exit();
     }
 }

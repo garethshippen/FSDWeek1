@@ -4,12 +4,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <GridPane fx:controller="fsd.week1.fsdweek1.Controller"
           xmlns:fx = "http://javafx.com/fxml"
           alignment="CENTER"
-          vgap = "10.0">
-    <Label fx:id="label" text="Please enter your name to win a prize" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-    <TextField fx:id="textField" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <Button fx:id="submit" text="Submit" alignment="BASELINE_LEFT" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <Button fx:id = "cancel" text = "Cancel" alignment="BASELINE_RIGHT" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+          vgap = "10.0"
+          hgap = "10"
+          gridLinesVisible = "false">
+    <Label fx:id="promptLabel" text="Please enter your name to win a prize" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="enterName" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <HBox GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.fillWidth="true" spacing = "10">
+        <Button fx:id="submitButton"
+                text="Submit"
+                onMouseClicked="#handleSubmitButtonPressed"/>
+        <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button fx:id = "cancelButton"
+                text = "Cancel"
+                onMouseClicked="#handleCancelButtonPressed"/>
+        <Region HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button fx:id = "quitButton"
+                text = "Exit"
+                onMouseClicked="#handleQuitButtonPressed"/>
+    </HBox>
 </GridPane>
