@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Week1Exercise extends Application
+public class Exercise1 extends Application
 {
     @Override
     public void start(Stage stage) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(Week1Exercise.class.getResource("view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Exercise1.class.getResource("exercise1view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("First JavaFX Application");
         stage.setScene(scene);

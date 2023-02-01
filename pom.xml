@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>fsd.week1.fsdweek1/fsd.week1.fsdweek1.Week1Exercise</mainClass>
+                            <mainClass>fsd.week1.fsdweek1/fsd.week1.fsdweek1.Exercise1</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
